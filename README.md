@@ -9,5 +9,5 @@ simple lightweight testing script for cs314 proj1
 ## Setup
 1. Download this repo **as a .zip**
 2. Extract the zip file
-3. Copy everything **besides LICENSE and README files into your prog1 directory**
+3. Copy everything **besides LICENSE and README files into your proj1 directory**
 4. Execute with `python3 david_test.py`
