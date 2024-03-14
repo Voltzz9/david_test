@@ -1,0 +1,9 @@
+Processes P2 0
+
+Process P2
+  rel R5
+  req R1
+  rel R4
+  req R3
+  rel R3
+  rel R1
