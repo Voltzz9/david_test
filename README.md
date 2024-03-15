@@ -13,3 +13,6 @@ simple lightweight testing script for cs314 proj1
 1. Clone this repo into your **proj1** folder
 2. Execute tests without deadlocks with `python3 david_test.py normal`
 3. Execute tests with deadlocks with `python3 david_test.py deadlock`
+
+## Your implementation gives a different result?
+If you have a solid argument for a different log file output feel free to open an issue on github. Make sure to include the differences and your argument as to why the output should be different.
