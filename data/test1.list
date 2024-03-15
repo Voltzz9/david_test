@@ -1,0 +1,18 @@
+Processes P1 3 P2 8 P3 4 P4 2 P5 3 P6 5
+Resources R1 R2
+
+Process P1
+req R1
+rel R1
+req R2
+
+Process P2
+req R1
+rel R1
+rel R1
+
+Process P3
+req R1
+rel R1
+rel R1
+rel R2

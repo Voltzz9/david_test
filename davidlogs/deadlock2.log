@@ -1,0 +1,30 @@
+P2 req R1: acquired
+P7: ready
+P2 req R2: acquired
+P8: ready
+P2 rel R1: released
+P1 req R1: acquired
+P1 rel R1: released
+P1 req R2: waiting
+P3 req R1: acquired
+P3 req R2: waiting
+P7 req R2: waiting
+P8 req R1: waiting
+Deadlock detected:P2 rel R2: released
+P1: ready
+P1 req R2: acquired
+Deadlock detected:P1 rel R2: released
+P3: ready
+P3 req R2: acquired
+P3 rel R1: released
+P8: ready
+P3 rel R2: released
+P7: ready
+P8 req R1: acquired
+P8 req R2: acquired
+P8 rel R1: released
+P8 rel R2: released
+P7 req R2: acquired
+P7 rel R2: released
+P7 req R1: acquired
+P7 rel R1: released

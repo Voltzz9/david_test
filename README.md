@@ -1,13 +1,12 @@
 # david_test
+v2.0
 simple lightweight testing script for cs314 proj1
 
 ## Important:
 - Current functionality: Tests the output log file of your scheduler against my implementation.
-- deadlocks are implemented.
 - it is **your responsibility** to ensure your `.gitignore` file accounts for my test cases
 
 ## Setup
-1. Download this repo **as a .zip**
-2. Extract the zip file
-3. Copy everything **besides LICENSE and README files into your proj1 directory**
-4. Execute with `python3 david_test.py`
+1. Clone this repo into your **proj1** folder
+2. Execute tests without deadlocks with `python3 david_test.py normal`
+3. Execute tests with deadlocks with `python3 david_test.py deadlock`

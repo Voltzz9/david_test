@@ -1,0 +1,18 @@
+P1 req R1: acquired
+P7: ready
+P1: ready
+P7 req R2: acquired
+P7 rel R2: released
+P7 rel R5: error nothing to release
+P1 rel R1: released
+P1 req R2: acquired
+P1 rel R2: released
+P1 req R4: acquired
+P1 rel R4: released
+P2 req R5: acquired
+P2 rel R5: released
+P2 rel R5: error nothing to release
+P3 req R3: acquired
+P3 rel R3: released
+P3 rel R1: error nothing to release
+P3 rel R2: error nothing to release
