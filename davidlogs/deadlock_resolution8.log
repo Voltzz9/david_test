@@ -7,4 +7,8 @@ P2 rel R5: error nothing to release
 P2 req R1: acquired
 P2 rel R4: error nothing to release
 P2 req R3: waiting
-Deadlock detected:
+Deadlock detected:P1 rel R3: released
+P2: ready
+P2 req R3: acquired
+P2 rel R3: released
+P2 rel R1: released

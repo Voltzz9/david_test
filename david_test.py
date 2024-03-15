@@ -96,7 +96,7 @@ def main():
     parser = argparse.ArgumentParser(description='Test script for scheduler')
 
     # Add the command line argument
-    parser.add_argument('mode', choices=['deadlock', 'normal'], help='Specify the mode: "deadlock" or "normal"')
+    parser.add_argument('mode', choices=['deadlock', 'deadlock_resolution', 'normal'], help='Specify the mode: "deadlock", "deadlock_resolution" or "normal"')
 
     # Parse the command line arguments
     args = parser.parse_args()
@@ -111,12 +111,12 @@ def main():
     # Run the test
     # the name of the exec command is ./schedule_processes data/david1.list data/david2.list 0 2
     # Deadlock
-    if args.mode == 'deadlock':
+    if args.mode == 'deadlock_resolution':
         for i in range(len(COMMANDS_DEADLOCK)):
             # empty the log file
             open(actual_log_filename, 'w').close()
             
-            expected_log_filename = 'davidlogs/deadlock' + str(i+1) + '.log'
+            expected_log_filename = 'davidlogs/deadlock_resolution' + str(i+1) + '.log'
             
             # get current working dir
             wd_dir = os.getcwd()
@@ -141,6 +141,34 @@ def main():
             # Compare the logs and highlight differences
             compare_logs(actual_log, expected_log, i+1)
     # Normal
+    elif args.mode == 'deadlock':
+        for i in range(len(COMMANDS_DEADLOCK)):
+            # empty the log file
+            open(actual_log_filename, 'w').close()
+            
+            expected_log_filename = 'davidlogs/deadlock' + str(i+1) + '.log'
+            
+            # get current working dir
+            wd_dir = os.getcwd()
+            # go back up out of davidtest dir
+            wd_dir = os.path.dirname(wd_dir)
+
+            exec_command = [wd_dir+'/schedule_processes'] + list(COMMANDS_DEADLOCK)[i].split(' ')
+            #print run command
+            print("Running command: ", exec_command)
+            exec_proc = subprocess.Popen(exec_command, stdout=subprocess.PIPE)
+            try:
+                exec_proc.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                print("\033Your program timed out after 5 seconds! Exitting.\033[0m")
+                sys.exit(1)
+
+            # Read the log files
+            actual_log = read_log_file(actual_log_filename)
+            expected_log = read_log_file(expected_log_filename)
+
+            # Compare the logs and highlight differences
+            compare_logs(actual_log, expected_log, i+1)
     else:
         for i in range(len(COMMANDS_NORMAL)):
             # empty the log file
