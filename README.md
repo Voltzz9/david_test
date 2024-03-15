@@ -1,6 +1,7 @@
 # david_test
-v2.0
+### v2.0
 simple lightweight testing script for cs314 proj1
+![Uploading kylefromthenorth-hzR9rDXWbqo-unsplash.jpg…]()
 
 ## Important:
 - Current functionality: Tests the output log file of your scheduler against my implementation.
