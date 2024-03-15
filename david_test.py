@@ -88,7 +88,10 @@ COMMANDS_NORMAL = [
     'data/test1.list data/test2.list 0 2',
     'data/test3.list data/test4.list 0 2',
     'data/test5.list data/test6.list 0 2',
-    'data/test7.list data/test8.list 0 2'
+    'data/test7.list data/test8.list 0 2',
+    'data/test9.list data/test10.list 2 2',
+    'data/test11.list data/test12.list 2 2',
+    'data/test9.list data/test10.list 0 2'
 ]
 
 def main():

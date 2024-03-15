@@ -1,0 +1,9 @@
+Processes A1 6 A2 7
+
+Process A1
+  req R1
+  rel R1
+
+Process A2
+  req R2
+  rel R2
