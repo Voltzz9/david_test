@@ -31,6 +31,9 @@ _deadlock_             | Test cases with **only** deadlock detection (no resolut
 If you have a solid argument for a different log file output feel free to open an issue on github. Make sure to include the differences and your argument as to why the output should be different.
 
 ## Changelog
+### v2.3 
+- more normal tests 
+
 ### v2.2
 - Fixed deadlock resolution test case bugs
 
