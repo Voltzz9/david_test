@@ -12,7 +12,7 @@ simple lightweight testing script for cs314 proj1
 
 ## Setup
 1. Clone this repo into your **proj1** directory
-2. Execute tests without deadlocks with `python3 david_test.py {mode}` where mode is `normal`, `deadlock_resolution`, or `deadlock`
+2. Execute tests with `python3 david_test.py {mode}` where mode is `normal`, `deadlock_resolution`, or `deadlock`. I recommend to use the `normal` cases.
 
 #### Example
 in the `proj1/david_test` dir
@@ -24,8 +24,10 @@ $ python3 david_test.py normal
 Option                 | Description
 -----------------------| --------------------------------------------------------
 _normal_               | Test cases with no deadlocks at all
-_deadlock\_resolution_ | Test cases with a full deadlock resolution implemented
+_deadlock\_resolution_ | Test cases with a full deadlock resolution implemented (bonus marks)
 _deadlock_             | Test cases with **only** deadlock detection (no resolution) which quits when a deadlock is found
+
+Note: if you have implemented deadlock **resolution** then the plain `deadlock` test cases will **not** pass
 
 ## Your implementation gives a different result?
 If you have a solid argument for a different log file output feel free to open an issue on github. Make sure to include the differences and your argument as to why the output should be different.
