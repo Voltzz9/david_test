@@ -1,5 +1,5 @@
 # david_test
-### Current Version:  v2.2
+### Current Version:  v2.3
 simple lightweight testing script for cs314 proj1
 ![david test](https://github.com/Voltzz9/david_test/assets/91885586/2e8fe12e-da8e-43aa-9c74-ab15f626440a)
 
